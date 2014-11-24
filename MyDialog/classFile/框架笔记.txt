@@ -1,0 +1,1 @@
+FileMapBindWindow类库涉及到D3D  所以未直接添加到MyClass类
