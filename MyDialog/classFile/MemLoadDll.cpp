@@ -41,7 +41,7 @@ BOOL CMemLoadDll::MemLoadLibrary(void* lpFileData, int DataLength)
 
   if(ImageSize == 0) return FALSE;
 
-  // 分配虚拟内存   
+  // 分配虚拟内存  1    
   //void *pMemoryAddress = VirtualAlloc((LPVOID)0x10000000, ImageSize,MEM_COMMIT|MEM_RESERVE, PAGE_EXECUTE_READWRITE);
 
   //修改,不指定dll基址申请内存
