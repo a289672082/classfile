@@ -132,6 +132,7 @@
     <ClInclude Include="GridCtrl_src\InPlaceEdit.h" />
     <ClInclude Include="GridCtrl_src\MemDC.h" />
     <ClInclude Include="GridCtrl_src\TitleTip.h" />
+    <ClInclude Include="mmLoader\strmem.h" />
     <ClInclude Include="MyBmp.h" />
     <ClInclude Include="MyCom.h" />
     <ClInclude Include="MyDialog.h" />
@@ -192,6 +193,9 @@
     <ClCompile Include="GridCtrl_src\GridDropTarget.cpp" />
     <ClCompile Include="GridCtrl_src\InPlaceEdit.cpp" />
     <ClCompile Include="GridCtrl_src\TitleTip.cpp" />
+    <ClCompile Include="mmLoader\strmem.cxx">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="MyBmp.cpp" />
     <ClCompile Include="MyCom.cpp" />
     <ClCompile Include="MyDialog.cpp" />

@@ -370,7 +370,16 @@ void dlg_YouxiMoshi::OnBnClickedButton5()
 void dlg_YouxiMoshi::OnBnClickedButton6()
 {
  
-	theApp.Reg_YiYou();
+	if (::FindWindowA("#32770","Error Report") != 0)
+	{
+
+		OutputDebugStringA("game windows  end");
+		system("taskkill /f /im LolClient.exe   & taskkill /f /im LolClient.exe   & taskkill /f /im BsSndRpt.exe & lol.launcher_tencent.exe & exit");
+		theApp.IsEndGame_SUB =true;
+		theApp.IsEndGame=true;
+ 
+	}
+	//theApp.Reg_YiYou();
 
 //	system("taskkill /f /im LolClient.exe   & taskkill /f /im LolClient.exe");
 

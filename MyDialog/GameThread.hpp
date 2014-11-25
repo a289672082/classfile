@@ -87,11 +87,23 @@ static  void  HelpThrad(int lp)
 			if (theApp.Code != -1)
 			{
 				OutputDebugStringA("game windows  end");
-					system("taskkill /f /im LolClient.exe   & taskkill /f /im LolClient.exe");
+					system("taskkill /f /im LolClient.exe   & taskkill /f /im LolClient.exe   & taskkill /f /im BsSndRpt.exe & lol.launcher_tencent.exe & exit");
 				theApp.IsEndGame_SUB =true;
 				theApp.IsEndGame=true;
 			}
 			
+			break;
+		}
+
+
+		if (::FindWindowA("#32770","Error Report") != 0)
+		{
+			 
+				OutputDebugStringA("game windows  end");
+				system("taskkill /f /im LolClient.exe   & taskkill /f /im LolClient.exe   & taskkill /f /im BsSndRpt.exe & lol.launcher_tencent.exe & exit");
+				theApp.IsEndGame_SUB =true;
+				theApp.IsEndGame=true;
+		 
 			break;
 		}
 				OutputDebugStringA("333333");
@@ -326,7 +338,7 @@ static  void  WaitBeginGames(int lp)
 			theApp.Thread_GameThread=AfxBeginThread(AFX_THREADPROC(BeginGames),&theApp);
 			Sleep(1000); 
 			::WaitForSingleObject(theApp.Thread_GameThread->m_hThread,INFINITE);
-			system("taskkill /f /im LolClient.exe   & taskkill /f /im LolClient.exe");
+			system("taskkill /f /im LolClient.exe   & taskkill /f /im LolClient.exe   & taskkill /f /im BsSndRpt.exe & lol.launcher_tencent.exe & exit");
 			OutputDebugStringA("CHECK  ONE");
 		}
 	}

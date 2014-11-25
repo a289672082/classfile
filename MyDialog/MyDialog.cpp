@@ -161,6 +161,7 @@ BOOL CMyDialogApp::InitInstance()
 	::SetCurrentDirectoryA(theApp.CurPath);
 	//µÇÂ¼ÓÃµÄ´óÄ®
 
+
 	InitDM();
 	dm_denglu.Init();
 	dm_denglu.MyReg();
@@ -201,10 +202,10 @@ void CMyDialogApp::InitDM()
 {
 
  MyCom  com1;
-	dm.dm=(Idmsoft*)com1.ReCOM_DM_RES(IDR_DM21,"dm2");
-		dm_game.dm =(Idmsoft*)com1.ReCOM_DM_RES(IDR_DM21,"dm2");
-			dm_Help.dm =(Idmsoft*)com1.ReCOM_DM_RES(IDR_DM21,"dm2");
-				dm_denglu.dm =(Idmsoft*)com1.ReCOM_DM_RES(IDR_DM21,"dm2");
+	dm.dm=(Idmsoft*)com1.ReCOM_DM(".\\dm2.DLL");
+		dm_game.dm =(Idmsoft*)com1.ReCOM_DM(".\\dm2.DLL");
+			dm_Help.dm =(Idmsoft*)com1.ReCOM_DM(".\\dm2.DLL");
+				dm_denglu.dm =(Idmsoft*)com1.ReCOM_DM(".\\dm2.DLL");
  
 /*
 	HMODULE hSetDllPathA =LoadLibraryA(".\\DmReg.dll");

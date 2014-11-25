@@ -1,6 +1,5 @@
 #include "stdafx.h"
-#include "MyCom.h"
-
+#include "MyCom.h" 
 
 MyCom::MyCom(void)
 {
@@ -9,6 +8,7 @@ MyCom::MyCom(void)
 
 MyCom::~MyCom(void)
 {
+	
 }
 
 

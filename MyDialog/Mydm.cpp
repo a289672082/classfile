@@ -4,12 +4,19 @@
 
 Mydm::Mydm(void)
 {
+	dm=nullptr;
 	Isreg=false;
 }
 
 
 Mydm::~Mydm(void)
 {
+	if(dm!=nullptr)
+	{
+		OutputDebugStringA("Release");
+		dm->UnBindWindow();
+		//dm->Release();
+	}
 }
 
 
